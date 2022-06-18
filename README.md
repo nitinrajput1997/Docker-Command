@@ -58,3 +58,35 @@ docker run ubuntu sleep 10
 
 It will exit after sleeping 10s otherwise it will exit instantly because no process was running to make container running
 
+#### Naming Container
+```bash
+docker run -d --name nitin_container image_Name
+```
+
+This will assign name to a container when it runs
+
+#### Port Mapping
+```bash
+docker run -p 80:5000 nitinrajput/app
+```
+
+#### Volume Mapping
+```bash
+docker run -v /opt/datadir:/var/lib/mysql mysql
+```
+
+Whenever the container runs, it will stores the data to external volume directory. Due to which, if somehow container remove then the data will remain in external directory
+
+#### Inspect
+```bash
+docker inspect container_name or _ID 
+```
+
+To see the detailed information about the container
+
+#### Logs
+```bash
+docker logs container_name or _ID
+```
+
+To see the logs of conatiner
