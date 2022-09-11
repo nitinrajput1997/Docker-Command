@@ -90,3 +90,9 @@ docker logs container_name or _ID
 ```
 
 To see the logs of conatiner
+
+
+#### Remove exited containers
+```bash
+docker system prune -a
+```
